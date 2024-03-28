@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tic tac toe</string>
+    <string name="Welcome_note">Welcome to TIC TAC TOE</string>
+    <string name="Small_box_1">Small_box_1</string>
+    <string name="Small_box_2">Small_box_2</string>
+    <string name="Small_box_3">Small_box_3</string>
+    <string name="Small_box_4">Small_box_4</string>
+    <string name="Small_box_5">Small_box_5</string>
+    <string name="Small_box_6">Small_box_6</string>
+    <string name="Small_box_7">Small_box_7</string>
+    <string name="Small_box_8">Small_box_8</string>
+    <string name="Small_box_9">Small_box_9</string>
+    <string name="Main_Grid">GRID</string>
+    <string name="status">"                 X's turn - TAP TO PLAY"</string>
+    <string name="Reset_button">RESTART GAME</string>
+</resources>
