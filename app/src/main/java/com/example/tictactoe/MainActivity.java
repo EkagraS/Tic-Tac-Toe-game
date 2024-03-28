@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
                     img.setImageResource(R.drawable.x);
                     activePlayer = 1;
                     TextView status = findViewById(R.id.status);
-                    status.setText("                 0's turn - TAP TO PLAY");
+                    status.setText("0's turn - TAP TO PLAY");
                 } else {
                     img.setImageResource(R.drawable.o);
                     activePlayer = 0;
                     TextView status = findViewById(R.id.status);
-                    status.setText("                 X's turn - TAP TO PLAY");
+                    status.setText("X's turn - TAP TO PLAY");
                 }
             }
             img.animate().translationYBy(1000f).setDuration(300);
@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
         {
             if (gameState[winPosition[0]] == gameState[winPosition[1]] &&
                     gameState[winPosition[1]] == gameState[winPosition[2]] &&
-                    gameState[winPosition[0]] != 2)
-            {
+                    gameState[winPosition[0]] != 2){
                 // Somebody has won! - Find out who!
                 gameActive = false;
                 if (gameState[winPosition[0]] == 0) {
@@ -85,34 +84,33 @@ public class MainActivity extends AppCompatActivity {
             if (!emptySquare && gameActive) {
                 // Game is a draw
                 gameActive = false;
-                winnerStr = "                          No one won";
+                winnerStr = "No one won";
                 TextView status = findViewById(R.id.status);
                 status.setText(winnerStr);
+                GameReset(view);
             }
 
         }
     }
-    @SuppressLint("SetTextI18n")
     public void GameReset(View view)
     {
         gameActive = true;
         activePlayer = 0;
-        for(int i : gameState)
-        {
+        for(int i = 0; i < gameState.length; i++) {
             gameState[i] = 2;
         }
-        ((ImageView)findViewById(R.id.imageView1)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView2)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView3)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView4)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView5)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView6)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView7)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView8)).setImageResource(0);
-        ((ImageView)findViewById(R.id.imageView9)).setImageResource(0);
+        ((ImageView)findViewById(R.id.imageView1)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView2)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView3)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView4)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView5)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView6)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView7)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView8)).setImageResource(android.R.color.transparent);
+        ((ImageView)findViewById(R.id.imageView9)).setImageResource(android.R.color.transparent);
 
         TextView status = findViewById(R.id.status);
-        status.setText("                 X's Turn - Tap to play");
+        status.setText("X's Turn - Tap to play");
     }
 
 

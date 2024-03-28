@@ -11,6 +11,6 @@
     <string name="Small_box_8">Small_box_8</string>
     <string name="Small_box_9">Small_box_9</string>
     <string name="Main_Grid">GRID</string>
-    <string name="status">"                 X's turn - TAP TO PLAY"</string>
+    <string name="status">"X's turn - TAP TO PLAY"</string>
     <string name="Reset_button">RESTART GAME</string>
 </resources>
